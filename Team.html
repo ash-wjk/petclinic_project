@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimun-scale=1.0, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>We Care-Pet Clinc</title>
     <!-- Include bootstrap CSS -->
@@ -15,7 +15,9 @@
 
     
       <link rel="stylesheet" type="text/css" href="styleMain.css"/>
-      
+       <!-- Link for font awesome -->
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 
   </head>
   
@@ -63,6 +65,7 @@
       <div class="span12">        
       <div class="main"><!--Team vets-->
                 <h1>Team</h1>
+                <div class="row">
                 <div class="col-lg-8" id="TeamVets" >
                     
                     <h2>Vets</h2>
@@ -87,6 +90,8 @@
                     <img src="img/teamVets/vet0.jpg" class="img-responsive"  alt="mainVet" align="middle"  style="width:90%; height:90%;padding-top:70px; padding-left:70px;">
 
                 </div>
+                </div>
+                
                     
                 
                
@@ -97,14 +102,14 @@
       <div class="row-fluid">
       <div class="span12">        
       <div class="main"><!--Team nurses-->
-           
+                <div class="row">
                 <div class="col-lg-8" id="Team" >
                     <h2>Nurses</h2>
                     <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
                     </p>
                     
-                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <div class="col-lg-3 ">
                         <img src="img/teamNurses/nurses1.jpg"  alt="nurse1" width="150px" height="200px"/> 
                     </div>
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -125,12 +130,48 @@
                     <img src="img/teamNurses/nurce0.jpg"  alt="mainNurse" align="middle"  style="width:90%; height:90%;padding-top:70px; padding-left:70px;">
 
                 </div>
+                </div>
                     
-                
+           
                
         </div>
         </div>
         </div>
+      
+           <!--Footer-->
+            <div class="navbar navbar-inverse navbar-bottom" id="footer-navbar">
+                
+                <div class="col-lg-4 col-s-4 col-xs-12">
+                <div class="navbar-text pull-left" >
+                    <p> Location</p>
+                    <p> 49, Tidenham Gardens,</p>
+                    <p> Croydon,</p>
+                    <p> CR0 5UT</p>
+                </div> 
+                </div>
+                
+                <div class="col-lg-4 col-s-4 col-xs-12">
+                <div class= "navbar-text pull-left" >
+                    <p> Opening Hours</p>
+                    <p> Mon to fri - 9.00am to 5.00pm</p>
+                    <p> Saturday - 10.00am to 3.00pm</p>
+                    <p> Sunday - Closed</p>
+                </div> 
+                </div>
+                
+                <div class="col-lg-4 col-s-4 col-xs-12">
+                <div class="navbar-text pull-right" >
+                    <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+                </div>
+                    
+                <div class="navbar-text pull-right" >
+                    <p> © 2004-2016 We care pet clinic- Project by Ash</p>
+                </div>
+               
+                </div>
+            </div><!--End of footer-->
                     
                     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
@@ -142,6 +183,10 @@
    
           
             
+      
+    <!-- Include fontawesome link-->      
+    <script src="https://use.fontawesome.com/6a16fec7f7.js"></script>
+      
       <!-- Include jQuery and bootstrap JS plugins -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
     
