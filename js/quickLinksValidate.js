@@ -1,12 +1,7 @@
-
-
 $(document).ready(function() {
-    $('#registerForm').formValidation({
-        framework: 'bootstrap',
-        err: {
-            container: '#messages'
-        },
-        icon: {
+    $('#registerForm').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
@@ -14,43 +9,119 @@ $(document).ready(function() {
         fields: {
             fName: {
                 validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please supply your first name'
+                    }
+                }
+            },
+             lName: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
                     notEmpty: {
-                        message: 'The full name is required and cannot be empty'
+                        message: 'Please supply your last name'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your phone number'
+                    },
+                    phone: {
+                        country: 'UK',
+                        message: 'Please supply a vaild phone number with area code'
+                    }
+                }
+            },
+            state: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select type of your pet'
+                    }
+                }
+            },
+            
+            pName: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your pets name'
+                    }
+                }
+            },
+            breed: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your pets breed'
                     }
                 }
             },
             email: {
                 validators: {
                     notEmpty: {
-                        message: 'The email address is required and cannot be empty'
+                        message: 'Please supply your email address'
                     },
                     emailAddress: {
-                        message: 'The email address is not valid'
+                        message: 'Please supply a valid email address'
                     }
                 }
             },
-            title: {
+            password: {
                 validators: {
-                    notEmpty: {
-                        message: 'The title is required and cannot be empty'
+                     stringLength: {
+                        min: 2,
                     },
-                    stringLength: {
-                        max: 100,
-                        message: 'The title must be less than 100 characters long'
+                    notEmpty: {
+                        message: 'Please supply your password'
                     }
                 }
             },
-            content: {
+            
+            confirmPassword: {
                 validators: {
-                    notEmpty: {
-                        message: 'The content is required and cannot be empty'
-                    },
                     stringLength: {
-                        max: 500,
-                        message: 'The content must be less than 500 characters long'
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please confirm your password'
+                    },
+                    
+                    identical: {
+                        field: 'password',
+                        message: 'The password and its confirm are not the same'
                     }
                 }
             }
-        }
-    });
+         
+            }
+        })
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#registerForm').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
 });
+
