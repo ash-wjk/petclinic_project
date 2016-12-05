@@ -1,0 +1,53 @@
+@media only screen and (min-width:768px) {
+    #quickLinks{
+        width: 30%;
+        float:left;
+    }   
+    
+     #tour{
+        width: 23%;
+        float:left;
+    }  
+    
+    #news{
+   padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+}
+
+@media only screen and (min-width:461px) and (max-width:767px)  {
+    #quickLinks{
+        width: 40%;
+        float:left;
+    }
+    #tour{
+        width: 40%;
+        float:left;
+
+    }
+    
+    #news{
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+}
+
+@media only screen and (min-width:0px) and (max-width:460px)  {
+    #quickLinks{
+        width: 100%;
+        align="middle";
+    }
+    
+    #tour{
+        width: 100%;
+        align="middle";
+    }
+    
+    #news{
+   
+    text-align: center;
+}
+}
+

@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     
-      <link rel="stylesheet" type="text/css" href="styleMain.css"/>
-       <!-- Link for font awesome -->
-      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+     <!-- Main style-->
+      <link rel="stylesheet" type="text/css" href="css/styleMain.css"/>
+      <!-- Media Query-->
+      <link rel="stylesheet" type="text/css" href="css/mediaQuery.css"/>
       <!-- Link for parallax style-->
-      <link rel="stylesheet" type="text/css" href="parallax.css">
+      <link rel="stylesheet" type="text/css" href="css/parallax.css">
 
 
   </head>
@@ -41,10 +42,10 @@
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         </a><!--logo-->
             
-            <a href="" class="navbar-brand">We Care</a>
+        <a href="" class="navbar-brand">We Care</a>
         </div><!--Navbar Header-->
         
-        <div class="collapse navbar-collapse" id="navbar-collapse">    
+        <div class="collapse navbar-collapse" id="navbar-collapse" style="font-size: 0.75em">    
         <ul class="nav navbar-nav" role="navigation">
          
             <li><a href=index.html>Home   |</a>
@@ -73,17 +74,16 @@
       <div class="span12">        
       <div class="main"><!--Services description-->
            
-                <div class="row">
-               <div class="col-lg-6 col-md-6 col-xs-12">
-                   <h1 style="padding-top:20px; padding-left:20px ">Contact Us</h1>
-                   <h2 style="padding-left:20px ">Book an Apponment</h2>
-                   <form action="" method="" style="padding-left:20px">
-                    
+                <div class="row" id="contactUsForm" >
+               <div class="col-lg-6 col-md-6 col-xs-12" style="padding-left:100px">
+                   <h1 style="padding-top:20px">Contact Us</h1>
+                   <h2>Book an Apponment</h2>
+                   <form action="" method="">
                     <div class="form-group row">
-                       <label for="comment" class="col-sm-2 col-form-label">Your Pet Is:</label>
+                       <label for="comment" class="col-sm-3 col-form-label">Your Pet Is:</label>
                         <div class="col-sm-4">
-                        <select class="form-control">
-                            <option>Select type of your pet</option>
+                        <select class="form-control" id="pType" name="pType">
+                            <option value=" " >Select type of your pet</option>
                             <option>Dog</option>
                             <option>Cat</option>
                             <option>Rabbit</option>
@@ -92,30 +92,30 @@
                    </div>
                        
                     <div class="form-group row">
-                        <label for="usr" class="col-sm-2 col-form-label">Your Name: </label>
+                        <label for="usr" class="col-sm-3 col-form-label">Your Name: </label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="name" name="name">
                         </div>
                     </div>
                        
                     <div class="form-group row">
-                        <label for="usr" class="col-sm-2 col-form-label">Your Pet's Name: </label>
+                        <label for="usr" class="col-sm-3 col-form-label">Your Pet's Name: </label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="pName" name="pName">
                         </div>
                     </div>
                        
                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Email:</label>
                         <div class="col-sm-6">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
                         </div>
                     </div>
                        
                     <div class="form-group row">
-                        <label for="comment" class="col-sm-2 col-form-label">Details:</label>
+                        <label for="comment" class="col-sm-3 col-form-label">Details:</label>
                         <div class="col-sm-6">
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
                         </div>
                     </div>
                        
@@ -179,28 +179,26 @@
         </div>
         </div>
         </div>
-          
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-
+  
       
-          
-    <!-- Include fontawesome link-->      
-    <script src="https://use.fontawesome.com/6a16fec7f7.js"></script>
-          
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-          
-    <!-- Include jQuery and bootstrap JS plugins -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
-                
+<!-- Include fontawesome link-->      
+<script src="https://use.fontawesome.com/6a16fec7f7.js"></script>            
+<!-- Include jQuery and bootstrap JS plugins -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap validator -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+
+ <script type="text/javascript" src="js/quickLinksValidate.js"></script>
       
   </body>
 </html>
