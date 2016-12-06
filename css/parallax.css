@@ -4,7 +4,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 300px;
-    background:rgb(20,20,20);
+
 }
 .parallax__group {
     height: 260px;
@@ -24,7 +24,7 @@
 
 .parallax__layer--base {
     transform: translateZ(0px);
-    z-index: 4;
+    z-index: 3;
 }
 .parallax__layer--back {
     transform: translateZ(-300px) scale(2);
@@ -56,7 +56,7 @@ img.home_image {
     background-image: url(../img/rat.jpg);
 
     /* Set a specific height */
-    min-height: 250px; 
+    min-height: 250px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;

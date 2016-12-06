@@ -1,83 +1,68 @@
 body {
     padding-top: 50px;
-    
   }
-
-
 h1 {
-    font-family: Tahoma; 
+    font-family: Tahoma;
     font-weight: bold;
 }
 h2 {
-    font-family: Tahoma; 
+    font-family: Tahoma;
 }
-
 p {
-    font-family: Comic Sans MS;  
+    font-family: Comic Sans MS;
 }
-
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
 }
-
 .navbar .navbar-collapse {
   text-align: center;
 }
-
 a:link {
     font-family: Tahoma;
     font-size: 1.5em;
 }
+.bg-image{
+background: black;
+background-attachment: fixed;
 
-.bg-image {
-    position: relative;
-
+  z-index: 1;
 }
-.bg-image img {
-    display: block;
-    width: 100%;
-    min-height: 600px;
-    margin: 0 auto;
-    
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-
-.bg-image h1 {
+.bookHeader{
     position: absolute;
-    text-align: right;
-    top:0;
+    top: 200px;
     left: 0;
-    right: 0;
-    color: black;
-}
-
-.bookHeader{ 
-    position: absolute; 
-    top: 200px; 
-    left: 0; 
     width: 100%;
-    font-family: Tahoma; 
+    font-family: Tahoma;
     font-weight: bold;
     padding-left: 60px;
 }
 
-.book { 
-    position: absolute; 
-    top: 200px; 
-    left: 0; 
+.book {
+    position: absolute;
+    top: 200px;
+    left: 0;
     width: 100%;
-    font-family: Tahoma; 
-    padding-left: 60px; 
+    font-family: Tahoma;
+    padding-left: 60px;
 }
-
+#home_image{
+  background: url(../img/header.jpg);
+  height:500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homeContent{
+  background: white;
+  z-index: 2;
+}
 .quickLinks{
-    padding-left: 60px;  
-    padding-right: 60px; 
+    padding-left: 60px;
+    padding-right: 60px;
     text-align: center;
     margin-bottom: 20px;
 
@@ -96,7 +81,7 @@ a:link {
 }
 
 .button{
-    
+
         background:#B2C7CF;
         color: white;
 
@@ -115,7 +100,7 @@ a:link {
 .responsive-video {
 position: relative;
 padding-bottom: 56.25%;
-padding-top: 30px; 
+padding-top: 30px;
     height: 0;
     overflow: hidden;
 }
@@ -136,13 +121,13 @@ height: 100%;
     #quickLinks{
         width: 30%;
         float:left;
-    }   
-    
+    }
+
      #tour{
         width: 23%;
         float:left;
-    }  
-    
+    }
+
     #news{
    padding-left: 20%;
     padding-right: 20%;
@@ -160,7 +145,7 @@ height: 100%;
         float:left;
 
     }
-    
+
     #news{
     padding-left: 20%;
     padding-right: 20%;
@@ -173,15 +158,14 @@ height: 100%;
         width: 100%;
         align="middle";
     }
-    
+
     #tour{
         width: 100%;
         align="middle";
     }
-    
+
     #news{
-   
+
     text-align: center;
 }
 }
-
