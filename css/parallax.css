@@ -49,18 +49,31 @@ img.home_image {
 #group1 .parallax__layer--back {
 }
 
+/* Home page */
+.bg-image{
+background: black;
+background-attachment: fixed;
+}
+
+#home_image{
+  background: url(../img/header.jpg);
+  height: 850px;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
 
 /* News page */
-.parallaxContact {
-    /* The image used */
-    background-image: url(../img/rat.jpg);
-
-    /* Set a specific height */
-    min-height: 250px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#news_image{
+  background: url(../img/twopuppies.jpg);
+  height:200px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* News page */
+#contact_image{
+  background: url(../img/all.jpg);
+  height:200px;
+  background-attachment: fixed;
+  background-size: cover;
 }

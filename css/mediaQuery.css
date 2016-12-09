@@ -2,17 +2,27 @@
     #quickLinks{
         width: 30%;
         float:left;
-    }   
-    
+    }
+
      #tour{
         width: 23%;
         float:left;
-    }  
-    
+    }
+
     #news{
    padding-left: 20%;
     padding-right: 20%;
     text-align: center;
+}
+.vets{
+  display: flex;
+  flex-flow: column;
+}
+.mainVet{
+  order: 2;
+}
+.teamVets{
+  order: 1;
 }
 }
 
@@ -24,14 +34,35 @@
     #tour{
         width: 40%;
         float:left;
-
     }
-    
     #news{
     padding-left: 20%;
     padding-right: 20%;
     text-align: center;
-}
+    }
+    .vets{
+      display: flex;
+      flex-flow: column;
+    }
+    .mainVet{
+      order: 1;
+    }
+    .teamVets{
+      order: 2;
+    }
+    #aboutUsImg{
+    text-align:middle;
+    padding-left:30px;
+    width:100%;
+    height:300px;
+    }
+    #servicesImg{
+      text-align:middle;
+      padding-left:30px;
+      width:100%;
+      height:300px;
+      }
+
 }
 
 @media only screen and (min-width:0px) and (max-width:460px)  {
@@ -39,15 +70,77 @@
         width: 100%;
         align="middle";
     }
-    
     #tour{
         width: 100%;
         align="middle";
     }
-    
     #news{
-   
     text-align: center;
+    }
+    #aboutUsImg{
+
+    }
+    #aboutUsVdo {
+    }
+
+    .vets{
+      display: flex;
+      flex-flow: column;
+    }
+    .mainVet{
+      order: 1;
+    }
+    .teamVets{
+      order: 2;
+    }
+    #aboutUsImg{
+    text-align:middle;
+    padding-left:30px;
+    width:100%;
+    height:200px;
+    }
+    #servicesImg{
+      text-align:middle;
+      padding-left:30px;
+      width:100%;
+      height:200px;
+      }
+    }
+
 }
+@media only screen and (min-width:990px)  {
+  #aboutUsImg{
+  text-align:middle;
+  padding-top:50px;
+  padding-left:30px;
+  width:90%;
+  height:50%;
+  }
+  #servicesImg{
+  align:middle;
+  width:100%;
+  height:500px;
+  overflow:auto;
+  }
+  #servicesImg img {
+    position: absolute;
+  }
+}
+@media only screen and (min-width:766px) and (max-width:990px)  {
+  #servicesImg  {
+  text-align:middle;
+  padding-left:30px;
+  width:100%;
+  height:400px;
+  }
+  #aboutUsImg{
+  text-align:middle;
+  padding-left:30px;
+  width:100%;
+  height:400px;
+  }
 }
 
+@media only screen and (min-width:0px) and (max-width:461px)  {
+
+}
