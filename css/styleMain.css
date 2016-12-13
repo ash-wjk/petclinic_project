@@ -55,9 +55,8 @@ a:link {
     margin-bottom: 20px;
 
 }
-
 .quickLinks a:link{
-        text-decoration: underline;
+    text-decoration: underline;
 }
 
 .footer{
@@ -67,19 +66,14 @@ a:link {
     height:75px;
     background:#1F2324 ;
 }
-
 .button{
 
         background:#B2C7CF;
         color: white;
-
 }
-
 #justpushtobottom {
     height: 82vh;
 }
-
-
 .video-wrapper{
     possition: relative;
     padding-bottom: 56.25%;
@@ -89,8 +83,8 @@ a:link {
 position: relative;
 padding-bottom: 56.25%;
 padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+height: 0;
+overflow: hidden;
 }
 
 .responsive-video iframe,
@@ -103,68 +97,14 @@ width: 100%;
 height: 100%;
 display: block;
 }
+
 #aboutUsVdo {
 padding-left: 70px;
 padding-top: 20px;
 text-align:middle;
 display: block;
- width:400px;
+width:400px;
 height:200px;
 }
 
-
-
 #success_message{ display: none;}
-
-@media only screen and (min-width:768px) {
-    #quickLinks{
-        width: 30%;
-        float:left;
-    }
-
-     #tour{
-        width: 23%;
-        float:left;
-    }
-
-    #news{
-   padding-left: 20%;
-    padding-right: 20%;
-    text-align: center;
-}
-}
-
-@media only screen and (min-width:461px) and (max-width:767px)  {
-    #quickLinks{
-        width: 40%;
-        float:left;
-    }
-    #tour{
-        width: 40%;
-        float:left;
-
-    }
-
-    #news{
-    padding-left: 20%;
-    padding-right: 20%;
-    text-align: center;
-}
-}
-
-@media only screen and (min-width:0px) and (max-width:460px)  {
-    #quickLinks{
-        width: 100%;
-        align="middle";
-    }
-
-    #tour{
-        width: 100%;
-        align="middle";
-    }
-
-    #news{
-
-    text-align: center;
-}
-}

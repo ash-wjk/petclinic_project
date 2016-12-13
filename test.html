@@ -50,7 +50,13 @@ Tip: Try to remove the background-attachment property to remove the scrolling ef
         </div>
 
 
+        .bg-image img {
+            display: block;
+            width: 100%;
+            min-height: 600px;
+            margin: 0 auto;
 
+        }
 
 function validateForm() {
     var x = document.registerForm.fName.value;
@@ -131,3 +137,25 @@ $(document).ready(function() {
 
  <div class="parallax__group">
   <div cl
+
+
+  .bg-image {
+      position: relative;
+      z-index: 1;
+        background-attachment: fixed;
+  }
+
+  .bg-image h1 {
+      position: absolute;
+      text-align: right;
+      top:0;
+      left: 0;
+      right: 0;
+      color: black;
+  }
+  .bg-image img {
+      display: block;
+      width: 100%;
+      min-height: 500px;
+      margin: 0 auto;
+        background-attachment: fixed;

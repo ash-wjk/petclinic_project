@@ -1,32 +1,121 @@
-@media only screen and (min-width:768px) {
-    #quickLinks{
-        width: 30%;
-        float:left;
-    }
-
-     #tour{
-        width: 23%;
-        float:left;
-    }
-
-    #news{
-   padding-left: 20%;
+@media only screen and (min-width:990px)  {
+  #home_image{
+    background: url(../img/header.jpg);
+    width: 100%;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+  #home_image img{
+    position: absolute;
+  }
+  #quickLinks{
+      width: 30%;
+      float:left;
+  }
+  #aboutUsImg{
+  background: url(../img/AboutUs.jpg);
+  padding-top:50px;
+  padding-left:30px;
+  width:100%;
+  height:600px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  }
+  #aboutUsImg img{
+    position: absolute;
+  }
+  #aboutUs{
+    padding-left: 100px;
+  }
+  #servicesImg{
+  background: url(../img/services.jpg);
+  padding-top:100px;
+  width:100%;
+  height:500px;
+  background-size:  cover;
+  background-repeat: no-repeat;
+  overflow:auto;
+  }
+  #servicesImg img {
+    position: relative;;
+  }
+  #news{
+    padding-left: 20%;
     padding-right: 20%;
     text-align: center;
+  }
+  #contactUsForm{
+    padding-left: 100px;
+  }
 }
-.vets{
-  display: flex;
-  flex-flow: column;
+@media only screen and (min-width:766px) and (max-width:990px)  {
+  #home_image{
+    background: url(../img/header1.jpg);
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    position: relative;
+  }
+  #home_image img{
+    display: block;
+    max-width: 1200px; /* corresponds to max height of 450px */
+    margin: 0 auto;
+  }
+  #quickLinks{
+      width: 30%;
+      float:left;
+  }
+  #servicesImg{
+  background: url(../img/services.jpg);
+  padding-top:100px;
+  width:100%;
+  height:500px;
+  background-size:  cover;
+  background-repeat: no-repeat;
+  overflow:auto;
+  }
+  #servicesImg img {
+    position: relative;;
+  }
+    #aboutUsImg{
+    background: url(../img/AboutUs.jpg);
+    padding-top:50px;
+    width:100%;
+    height:500px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    }
+    #aboutUsImg img{
+      position: absolute;
+    }
+    #aboutUs{
+      padding-left: 50px;
+    }
+    #news{
+      padding-left: 20%;
+      padding-right: 20%;
+      text-align: center;
+    }
+    #contactUsForm{
+      padding-left: 100px;
+    }
 }
-.mainVet{
-  order: 2;
-}
-.teamVets{
-  order: 1;
-}
-}
-
-@media only screen and (min-width:461px) and (max-width:767px)  {
+@media only screen and (min-width:459px) and (max-width:767px)  {
+  #home_image{
+    background: url(../img/header2.jpg);
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+  #home_image img{
+    position: absolute;
+  }
     #quickLinks{
         width: 40%;
         float:left;
@@ -50,36 +139,69 @@
     .teamVets{
       order: 2;
     }
-    #aboutUsImg{
-    text-align:middle;
-    padding-left:30px;
+
+      #aboutUsImg{
+      background: url(../img/AboutUs.jpg);
+      padding-top:50px;
+      width:100%;
+      height:500px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      }
+      #aboutUsImg img{
+        position: absolute;
+      }
+      #aboutUs{
+        padding-left: 50px;
+      }
+    #servicesImg{
+    background: url(../img/services.jpg);
+    padding-top:100px;
     width:100%;
     height:300px;
+    background-size:  cover;
+    background-repeat: no-repeat;
+    overflow:auto;
     }
-    #servicesImg{
-      text-align:middle;
-      padding-left:30px;
-      width:100%;
-      height:300px;
-      }
+    #servicesImg img {
+      position: relative;;
+    }
+    #news{
+      padding-left: 20%;
+      padding-right: 20%;
+      text-align: center;
+    }
+    #contactUsForm{
+      padding-left: 50px;
+      padding-right: 30px;
 
+    }
 }
 
 @media only screen and (min-width:0px) and (max-width:460px)  {
+  #home_image{
+    background: url(../img/header3.jpg);
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+  #home_image img{
+    position: absolute;
+  }
     #quickLinks{
         width: 100%;
-        align="middle";
+        align: middle;
     }
     #tour{
         width: 100%;
-        align="middle";
+        align: middle;
     }
     #news{
     text-align: center;
     }
-    #aboutUsImg{
 
-    }
     #aboutUsVdo {
     }
 
@@ -93,53 +215,94 @@
     .teamVets{
       order: 2;
     }
-    #aboutUsImg{
-    text-align:middle;
-    padding-left:30px;
+
+      #aboutUsImg{
+      background: url(../img/AboutUs.jpg);
+      padding-top:50px;
+      width:100%;
+      height:400px;
+      align: middle;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      }
+      #aboutUsImg img{
+        position: absolute;
+      }
+      #aboutUs{
+        padding-left: 20px;
+      }
+    #servicesImg{
+    background: url(../img/services.jpg);
+    padding-top:100px;
     width:100%;
     height:200px;
+    background-size:  cover;
+    background-repeat: no-repeat;
+    overflow:auto;
     }
-    #servicesImg{
-      text-align:middle;
-      padding-left:30px;
-      width:100%;
-      height:200px;
-      }
+    #servicesImg img {
+      position: relative;;
+    }
+    #news{
+      padding-left: 20%;
+      padding-right: 20%;
+      text-align: center;
+    }
+    #contactUsForm{
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
 }
-@media only screen and (min-width:990px)  {
-  #aboutUsImg{
-  text-align:middle;
-  padding-top:50px;
-  padding-left:30px;
-  width:90%;
-  height:50%;
+
+@media only screen and (min-width:768px) {
+  #home_image{
+    background: url(../img/header.jpg);
+
+    width: 100%;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
-  #servicesImg{
-  align:middle;
-  width:100%;
-  height:500px;
-  overflow:auto;
-  }
-  #servicesImg img {
+  #home_image img{
     position: absolute;
+
+  }
+    #quickLinks{
+        width: 40%;
+        float:left;
+    }
+
+    #quickLinks{
+        width: 30%;
+        float:left;
+    }
+
+     #tour{
+        width: 23%;
+        float:left;
+    }
+
+    #news{
+   padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+  }
+  .vets{
+    display: flex;
+    flex-flow: column;
+  }
+  .mainVet{
+    order: 2;
+  }
+  .teamVets{
+    order: 1;
   }
 }
-@media only screen and (min-width:766px) and (max-width:990px)  {
-  #servicesImg  {
-  text-align:middle;
-  padding-left:30px;
-  width:100%;
-  height:400px;
-  }
-  #aboutUsImg{
-  text-align:middle;
-  padding-left:30px;
-  width:100%;
-  height:400px;
-  }
-}
+
+
+
 
 @media only screen and (min-width:0px) and (max-width:461px)  {
 
