@@ -9,7 +9,7 @@ h2 {
     font-family: Tahoma;
 }
 p {
-    font-family: Comic Sans MS;
+    font-family: 'Roboto', sans-serif
 }
 .navbar .navbar-nav {
   display: inline-block;
