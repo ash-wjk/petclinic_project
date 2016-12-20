@@ -35,7 +35,22 @@ $(document).ready(function() {
 
   });
 
-
+  // Book appointment
+  $('#bookForm').submit(function(event) {
+    var $form = $(this);
+    $form.find("#bookSubmit").prop('disabled', true);
+    var uid = "xxxx";
+    // id,username,email,date,time,doctor,details
+    var username = "asha wjk";
+    var email = "ddd@dddd.com";
+    var date = new Date();
+    var time = "1-2";
+    var doctor = "mr cv";
+    var details = "details d d d ";
+    console.log("bookForm");
+    addAppointmentRequest(uid,username,date,date,time,doctor,details);
+    return false;
+  });
 
 });
 
@@ -87,4 +102,46 @@ function handleSignIn(email,password) {
  }
  });
  // [END authwithemail]
+}
+
+/**
+* Add pet details.
+*/
+
+function addPet(uid,username,type,name,breed) {
+  // A pet entry.
+  var postData = {
+    owner: username,
+    uid: uid,
+    body: body,
+    title: title,
+    starCount: 0,
+    authorPic: picture
+  };
+}
+
+/**
+* Add Appointment request details.
+*/
+function addAppointmentRequest(uid,username,email,date,time,doctor,details) {
+    console.log("addAppointmentRequest");
+  // An appointment entry.
+  var appointmentRequestData = {
+    owner: username,
+    uid: uid,
+    date: date,
+    time: time,
+    email: email,
+    doctor: doctor,
+    details: details
+  };
+
+  // Get a key for appointment
+  var newRequestKey = firebase.database().ref().child('appointmentRequests').push().key;
+
+  // Write the new appointment request's data
+  var updates = {};
+  updates['/appointmentRequests/' + newRequestKey] = appointmentRequestData;
+
+  return firebase.database().ref().update(updates);
 }
