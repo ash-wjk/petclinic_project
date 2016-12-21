@@ -34,10 +34,6 @@ function handleSignIn(email,password) {
    }
    document.getElementById('logSubmit').disabled = false;
    // [END_EXCLUDE]
- }).then(function(user){
-   if(user !=null ){
-   alert("Logged in with "+user.email);
- }
  });
  // [END authwithemail]
 }
