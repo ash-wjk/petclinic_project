@@ -7,7 +7,7 @@
     <title>We Care-Pet Clinc</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Main style-->
     <link rel="stylesheet" type="text/css" href="css/styleMain.css"/>
@@ -26,46 +26,19 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Add jQuery lib-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(function(){
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+    </script>
   </head>
-
   <body>
+    <!--Header-->
+    <div id="header"></div>
 
-    <!--Navbar-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
-
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-        <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        </a><!--logo-->
-
-            <a href="" class="navbar-brand">We Care</a>
-        </div><!--Navbar Header-->
-
-        <div class="collapse navbar-collapse" id="navbar-collapse" style="font-size: 0.75em">
-        <ul class="nav navbar-nav" role="navigation">
-
-            <li><a href=index.html>Home   |</a>
-            <li><a href=services.html>Services   |</a>
-            <li><a href=Team.html>Staff   |</a>
-            <li><a href=AboutUs.html>About Us   |</a>
-            <li><a href=tour.html>Tour   |</a>
-            <li><a href=news.html>News   |</a>
-            <li><a href=ContactUs.html>Contact Us</a>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-        </div>
-      </nav><!--End navbar-->
 
         <!--Header Image-->
         <div id="news_image" data-stellar-background-ratio="0.5"></div>
@@ -138,9 +111,6 @@ Last year we raised a grand total of £2760 and so this year we would very much 
 
                 </div>
             </div><!--End of footer-->
-
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
                 <!-- Include all compiled plugins (below), or include individual files as needed -->
                 <script src="js/bootstrap/bootstrap.min.js"></script>
 

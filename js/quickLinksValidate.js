@@ -1,6 +1,5 @@
 $(document).ready(function() {
     // Register form validation
-
     $('#registerForm').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {

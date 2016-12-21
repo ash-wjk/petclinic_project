@@ -7,7 +7,7 @@
     <title>We Care-Pet Clinc</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Main style-->
     <link rel="stylesheet" type="text/css" href="css/styleMain.css"/>
@@ -22,48 +22,18 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Add jQuery lib-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(function(){
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+    </script>
   </head>
-
-
   <body>
-
-    <!--Navbar-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
-
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-        <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        </a><!--logo-->
-
-            <a href="" class="navbar-brand">We Care</a>
-        </div><!--Navbar Header-->
-
-        <div class="collapse navbar-collapse" id="navbar-collapse" style="font-size: 0.75em">
-        <ul class="nav navbar-nav" role="navigation">
-
-            <li><a href=index.html>Home   |</a>
-            <li><a href=services.html>Services   |</a>
-            <li><a href=Team.html>Staff   |</a>
-            <li><a href=AboutUs.html>About Us   |</a>
-            <li><a href=tour.html>Tour   |</a>
-            <li><a href=news.html>News   |</a>
-            <li><a href=ContactUs.html>Contact Us</a>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-        </div>
-      </nav><!--End navbar-->
-
+    <!--Header-->
+    <div id="header"></div>
 
       <div class="row-fluid">
       <div class="span12">
@@ -121,48 +91,13 @@
         </div>
         </div>
 
-      <!--Footer-->
-            <div class="navbar navbar-inverse navbar-bottom" id="footer-navbar">
+        <!--Footer-->
+        <div id="footer"></div>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
 
-                <div class="col-lg-4 col-s-4 col-xs-12">
-                <div class="navbar-text pull-left" >
-                    <p> Location</p>
-                    <p> 49, Tidenham Gardens,</p>
-                    <p> Croydon,</p>
-                    <p> CR0 5UT</p>
-                </div>
-                </div>
-
-                <div class="col-lg-4 col-s-4 col-xs-12">
-                <div class= "navbar-text pull-left" >
-                    <p> Opening Hours</p>
-                    <p> Mon to fri - 9.00am to 5.00pm</p>
-                    <p> Saturday - 10.00am to 3.00pm</p>
-                    <p> Sunday - Closed</p>
-                </div>
-                </div>
-
-                <div class="col-lg-4 col-s-4 col-xs-12">
-                <div class="navbar-text pull-right" >
-                    <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
-                </div>
-
-                <div class="navbar-text pull-right" >
-                    <p> © 2004-2016 We care pet clinic- Project by Ash</p>
-                </div>
-
-                </div>
-            </div><!--End of footer-->
-
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-                <!-- Include all compiled plugins (below), or include individual files as needed -->
-                <script src="js/bootstrap/bootstrap.min.js"></script>
-
-            <!-- Include fontawesome link-->
-                <script src="https://use.fontawesome.com/6a16fec7f7.js"></script>
+        <!-- Include fontawesome link-->
+        <script src="https://use.fontawesome.com/6a16fec7f7.js"></script>
 
   </body>
 </html>

@@ -124,7 +124,7 @@ function addPet(uid,username,type,name,breed) {
 * Add Appointment request details.
 */
 function addAppointmentRequest(uid,username,email,date,time,doctor,details) {
-    console.log("addAppointmentRequest");
+  console.log("addAppointmentRequest");
   // An appointment entry.
   var appointmentRequestData = {
     owner: username,
