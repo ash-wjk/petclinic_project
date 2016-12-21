@@ -24,6 +24,10 @@ p {
     margin-right: 10px;
 }
 
+.greet-text {
+  font-size: 5em;
+}
+
 a:link {
     font-family: Tahoma;
     font-size: 1.5em;
