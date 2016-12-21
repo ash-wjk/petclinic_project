@@ -2,16 +2,6 @@ $(document).ready(function() {
 
   console.log("page is ready");
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBrNy1HQcvLI0sNTej5CAqlNR0zPxE3GeY",
-    authDomain: "petclinic-c1bdb.firebaseapp.com",
-    databaseURL: "https://petclinic-c1bdb.firebaseio.com",
-    storageBucket: "petclinic-c1bdb.appspot.com",
-    messagingSenderId: "112801924884"
-  };
-  firebase.initializeApp(config);
-
   // Registration
   $('#registerForm').submit(function(event) {
 
@@ -26,6 +16,7 @@ $(document).ready(function() {
 
   // Signin
   $('#signinForm').submit(function(event) {
+    console.log("signinForm");
     var $form = $(this);
     $form.find("#logSubmit").prop('disabled', true);
     var email = $form.find("#logEmail").val();
