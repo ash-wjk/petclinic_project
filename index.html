@@ -66,7 +66,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-            <p id="user-greeting-text" class="navbar-text">Hi</p>
+            <p id="user-greeting-text" class="navbar-text" style="font-size: 1.5em">Hi</p>
             <li id="admin-button" style="display:none"> <a href="#" data-target="#adminPopup" data-toggle="modal">
               <span class="glyphicon glyphicon-user"></span> Admin</a>
             </li>
@@ -169,7 +169,7 @@
 
                       <div class="col-lg-4" id="quickLinks">
                           <img src="img/q12.jpg" alt="" align="middle" style="width:100px;height:100px;"><br />
-                          <a href="signin.html" data-target="#signinPopup" data-toggle="modal">Book online Appointment</a>
+                          <a href="#bookonlinePopup" data-target="#bookonlinePopup" data-toggle="modal">Book online Appointment</a>
                           <p style="letter-spacing: .09em; font-size: 1.2em;">Avoid busy phone line</p>
                       </div>
 
@@ -210,31 +210,32 @@
             </div>
             <div class="modal-body">
               <form id="registerForm" class="registerForm" name="registerForm" role="form">
-                <div class="form-group row">
+
+                <div class="form-group row" id="reg-fname">
                   <label for="usr" class="col-sm-3 col-form-label">First Name: </label>
                   <div class="col-sm-6">
-                      <input type="text" class="form-control" id="fName" name="fName">
+                      <input type="text" class="form-control" id="regfName" name="fName">
                   </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row" id="reg-lname">
                     <label for="usr" class="col-sm-3 col-form-label">Last Name: </label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="lName" name="lName">
+                        <input type="text" class="form-control" id="reglName" name="lName">
                     </div>
                 </div>
 
-               <div class="form-group row">
+               <div class="form-group row" id="reg-phone">
                     <label for="usr" class="col-sm-3 col-form-label">Telephone number: </label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" id="phone" name="phone">
+                        <input type="text" class="form-control" id="regPhone" name="phone">
                     </div>
                 </div>
 
                 <div class="form-group row">
                    <label for="comment" class="col-sm-3 col-form-label">Your Pet Is:</label>
                     <div class="col-sm-4">
-                    <select class="form-control" id="state" name="state">
+                    <select class="form-control" id="regPetType" name="state">
                         <option value=" " >Select type of your pet</option>
                         <option>Dog</option>
                         <option>Cat</option>
@@ -246,32 +247,32 @@
                  <div class="form-group row">
                     <label for="usr" class="col-sm-3 col-form-label">Your Pet's Name: </label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="pName" name="pName">
+                        <input type="text" class="form-control" id="regPetName" name="pName">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="usr" class="col-sm-3 col-form-label">Breed: </label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="breed" name="breed">
+                        <input type="text" class="form-control" id="regBreed" name="breed">
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row" id="reg-email">
                     <label for="inputEmail3" class="col-sm-3 col-form-label">Email:</label>
                     <div class="col-sm-6">
-                        <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        <input type="email" name="email" class="form-control" id="regEmail" placeholder="Email">
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row" id="reg-password">
                     <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
                     <div class="col-sm-6">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row" id="reg-c-password">
                     <label for="inputPassword3" class="col-sm-3 col-form-label">Confirm Password</label>
                     <div class="col-sm-6">
                     <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm password">
@@ -280,8 +281,9 @@
 
                 <div class="form-group row" align="right" style="padding:10px">
 
-                    <input type="submit" class="btn btn-default" value="Register" id="submit"/>
+                    <input type="submit" class="btn btn-default" value="Register" id="regSubmit" disabled="true"/>
                     <input type="Reset" class="btn btn-default" value="Clear" id="clear"/>
+
                 </div>
               </form>
             </div>
@@ -300,57 +302,58 @@
             </div>
             <div class="modal-body">
               <form id="bookForm" class="bookForm" name="bookForm" role="form">
+
                 <div class="form-group row">
                     <label for="usr" class="col-sm-3 col-form-label">First Name: </label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="fName" name="fName">
+                        <input type="text" class="form-control" id="bookfName" name="fName">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="usr" class="col-sm-3 col-form-label">Last Name: </label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="lName" name="lName">
+                        <input type="text" class="form-control" id="booklName" name="lName">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="usr" class="col-sm-3 col-form-label">Telephone number: </label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" id="phone" name="phone">
+                        <input type="text" class="form-control" id="bookPhone" name="phone">
                     </div>
                 </div>
 
                 <div class="form-group row">
                    <label for="comment" class="col-sm-3 col-form-label">Your Pet Is:</label>
                     <div class="col-sm-4">
-                    <select class="form-control" id="pType" name="pType">
-                        <option value=" " >Select type of your pet</option>
-                        <option>Dog</option>
-                        <option>Cat</option>
-                        <option>Rabbit</option>
-                    </select>
+                      <select class="form-control" id="bookPetType" name="pType">
+                          <option value=" " >Select type of your pet</option>
+                          <option>Dog</option>
+                          <option>Cat</option>
+                          <option>Rabbit</option>
+                      </select>
                    </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="usr" class="col-sm-3 col-form-label">Your Pet's Name: </label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="pName" name="pName">
+                        <input type="text" class="form-control" id="bookPetName" name="pName">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="usr" class="col-sm-3 col-form-label">Breed: </label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="breed" name="breed">
+                        <input type="text" class="form-control" id="bookBreed" name="breed">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-3 col-form-label">Email:</label>
                     <div class="col-sm-6">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        <input type="email" class="form-control" id="bookEmail" name="email" placeholder="Email">
                     </div>
                 </div>
 
@@ -358,7 +361,7 @@
                     <label class="col-xs-3">Date:</label>
                     <div class="col-xs-5 date">
                         <div class="input-group input-append date" id="datePicker">
-                            <input type="date" class="form-control" name="aDate" />
+                            <input type="date" class="form-control" name="aDate" id="bookDate"/>
                             <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
                         </div>
                     </div>
@@ -367,27 +370,36 @@
                 <div class="form-group row">
                       <label for="usr" class="col-sm-3 col-form-label">Preferred appointment time: </label>
                       <div class="col-sm-4">
-                          <input type="text" class="form-control" id="aTime" name="aTime">
+                        <select class="form-control" id="bookTime" name="pType" id="bookTime">
+                            <option value=" " >Select your preferred time</option>
+                            <option>10am-11am</option>
+                            <option>11am-12pm</option>
+                            <option>12pm-1pm</option>
+                            <option>1pm-2am</option>
+                            <option>2pm-3pm</option>
+                            <option>3pm-4pm</option>
+                            <option>4pm-5pm</option>
+                        </select>
                       </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="usr" class="col-sm-3 col-form-label">Is there a particular veterinary surgeon you would prefer to see?: </label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="vName" name="vName">
+                        <input type="text" class="form-control" id="bookDoctor" name="vName">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="comment" class="col-sm-3 col-form-label">Details:</label>
                     <div class="col-sm-6">
-                    <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                    <textarea class="form-control" rows="5" id="bookDetails" name="comment"></textarea>
                     </div>
                 </div>
 
                 <div class="form-group row" align="right" style="padding:10px">
 
-                    <input type="Submit" class="btn btn-default" value="Submit" id="submit"/>
+                    <input type="Submit" class="btn btn-default" value="Submit" id="bookSubmit"/>
                     <input type="Reset" class="btn btn-default" value="Clear" id="submit"/>
                 </div>
               </form>
