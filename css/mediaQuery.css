@@ -270,6 +270,9 @@
         width: 40%;
         float:left;
     }
+    .homeContent{
+      padding-left: 30px;
+    }
     #tour{
         width: 40%;
         float:left;
@@ -374,6 +377,9 @@
     padding-top:30px;
     width: 30%;
     float:left;
+  }
+  .homeContent{
+    padding-left: 30px;
   }
     #quickLinks{
         width: 100%;
