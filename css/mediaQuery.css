@@ -51,7 +51,7 @@
     font-size: 1.1em;
   }
   .homeAnimal{
-    padding-top: 50px;
+    padding-top: 0px;
     width: 100%;
     float:left;
   }
@@ -363,6 +363,7 @@
   }
   #home_image1 img{
     position: absolute;
+  }
   .homePageTitle{
     display: none;
   }
@@ -370,7 +371,7 @@
       display: none;
   }
   .homeAnimal{
-    padding-top: 30px;
+    padding-top:30px;
     width: 30%;
     float:left;
   }
