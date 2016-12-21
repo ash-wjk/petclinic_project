@@ -196,6 +196,32 @@ function setPet(petType,petName,breed) {
 }
 
 
+/**
+* Add Appointment request details.
+*/
+function addAppointmentRequest(uid,username,email,date,time,doctor,details) {
+  // An appointment entry.
+  var appointmentRequestData = {
+    uid: uid,
+    date: date,
+    time: time,
+    email: email,
+    doctor: doctor,
+    details: details
+  };
+
+  console.log(appointmentRequestData);
+
+  // Get a key for appointment
+  var newRequestKey = firebase.database().ref().child('appointmentRequests').push().key;
+
+  // Write the new appointment request's data
+  var updates = {};
+  updates['/appointmentRequests/' + newRequestKey] = appointmentRequestData;
+
+  return firebase.database().ref().update(updates);
+}
+
 
 // Bindings on load.
 window.addEventListener('load', function() {
@@ -239,4 +265,44 @@ $(document).ready(function() {
     $('#registerForm').data('bootstrapValidator').resetForm();
     return false;
   });
+
+
+  // Book
+    $('#bookSubmit').click(function(event) {
+      $("#bookSubmit").prop('disabled', true);
+      var email = $("#bookEmail").val();
+
+      var fname = $("#bookfName").val();
+      var lname = $("#booklName").val();
+      var phone = $("#bookPhone").val();
+
+      var petType = $("#bookPetType").val();
+      var petName = $("#bookPetName").val();
+      var breed = $("#bookBreed").val();
+
+      var date = $("#bookDate").val();
+      var time = $("#bookTime").val();
+      var doctor = $("#bookDoctor").val();
+      var details = $("#bookDetails").val();
+
+      if(currentUID === null){
+        firebase.auth().signInAnonymously().catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // ...
+        }).then(function(user){
+          if(user !=null ){
+            addAppointmentRequest(user.uid,fname,email,date,time,doctor,details);
+        }
+        });
+      }else {
+        addAppointmentRequest(currentUID,fname,email,date,time,doctor,details);
+      }
+
+      $('#bookForm').modal('hide');
+      $('#bookForm')[0].reset();
+      $('#bookForm').data('bootstrapValidator').resetForm();
+      return false;
+    });
 });
