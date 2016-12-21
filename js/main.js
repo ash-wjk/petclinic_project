@@ -5,6 +5,8 @@ var signInButton = document.getElementById('sign-in-button');
 var signOutButton = document.getElementById('sign-out-button');
 var userGreetingText = document.getElementById('user-greeting-text');
 
+var adminButton = document.getElementById('admin-button');
+
 
 /**
  * The ID of the currently signed-in User. We keep track of this to detect Auth state change events that are just
@@ -30,6 +32,11 @@ function onAuthStateChanged(user) {
 
     $('#signinPopup').modal('hide');
 
+    if(user.email === 'admin@pcc.com'){
+      adminButton.style.display = 'initial';
+    }else {
+      adminButton.style.display = 'none';
+    }
 
     // writeUserData(user.uid, user.displayName, user.email, user.photoURL);
     // startDatabaseQueries();
@@ -39,6 +46,7 @@ function onAuthStateChanged(user) {
     signOutButton.style.display = 'none';
     userGreetingText.style.display = 'none';
     signInButton.style.display = 'initial';
+    adminButton.style.display = 'none';
 
     // Display the splash page where you can sign-in.
     //splashPage.style.display = '';

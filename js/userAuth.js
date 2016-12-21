@@ -9,6 +9,8 @@ $(document).ready(function() {
     var email = $("#logEmail").val();
     var password = $("#logPassword").val();
     handleSignIn(email,password);
+     $('#signinForm')[0].reset();
+     $('#signinForm').data('bootstrapValidator').resetForm();
     return false;
 
   });

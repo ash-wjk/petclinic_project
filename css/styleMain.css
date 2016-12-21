@@ -19,6 +19,11 @@ p {
 .navbar .navbar-collapse {
   text-align: center;
 }
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: 10px;
+}
+
 a:link {
     font-family: Tahoma;
     font-size: 1.5em;

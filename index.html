@@ -66,12 +66,15 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-              <p id="user-greeting-text" class="navbar-text">Some text</p>
-            <li id="sign-out-button">
-              <button class="btn btn-danger navbar-btn">Sign out</button>
+            <p id="user-greeting-text" class="navbar-text">Hi</p>
+            <li id="admin-button" style="display:none"> <a href="#" data-target="#adminPopup" data-toggle="modal">
+              <span class="glyphicon glyphicon-user"></span> Admin</a>
+            </li>
+            <li id="sign-out-button"> <a href="#">
+                <span class="glyphicon glyphicon-log-out"></span> Sign out</a>
             </li>
             <li id="sign-in-button"><a href="signin.html" data-target="#signinPopup" data-toggle="modal">
-                <span class="glyphicon glyphicon-log-in"></span> Sign in  .</a>
+                <span class="glyphicon glyphicon-log-in"></span> Sign in</a>
             </li>
             </ul>
             </div>
@@ -189,7 +192,8 @@
       <div id="footer"></div>
 
       <!-- Signin -->
-      <div class="modal fade" id="signinPopup"  role="dialog" aria-labelledby="Sign in" aria-hidden="true">
+
+      <div class="modal fade" id="signinPopup"  role="dialog" aria-labelledby="Sign in Popup" aria-hidden="true">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
             </div>
@@ -470,6 +474,22 @@
         </div>
       </div>
       <!--End of Quick Repeat Prescription popup-->
+
+      <!--Admin Panel-->
+      <div class="modal fade" id="adminPopup"  role="dialog" aria-labelledby="Admin Panel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 class="modal-title" id="myModalLabel" style="font-weight:bold">Admin Panel</h3>
+              </div>
+              <div class="modal-body">
+              </div>
+            </div>
+        </div>
+      </div>
+      <!--End of Admin Panel-->
+
 
       <!-- Firebase -->
       <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>

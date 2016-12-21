@@ -58,8 +58,7 @@ $('#signinForm').bootstrapValidator({
        })
        .on('success.form.bv', function(e) {
           //$('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-           //$('#signinForm').data('bootstrapValidator').resetForm();
-           console.log("succss");
+           $('#signinForm').data('bootstrapValidator').resetForm();
            // Prevent form submission
            e.preventDefault();
 
