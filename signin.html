@@ -1,0 +1,77 @@
+<!--Sign in-->
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  <h3 class="modal-title" id="myModalLabel" style="font-weight:bold">Sign in</h3>
+</div>
+<div class="modal-body">
+  <form id="signinForm" class="signinForm" name="signinForm" role="form">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-4 col-form-label">Email:</label>
+      <div class="col-sm-8">
+          <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-4 col-form-label">Password:</label>
+      <div class="col-sm-8">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
+    </div>
+    <div class="form-group row" align="right" style="padding:10px">
+      <input type="submit" class="btn btn-default" value="Sign in" id="submit"/>
+    </div>
+  </form>
+</div>
+<!--End of Sign in-->
+<script type="text/javascript">
+$('#signinForm').bootstrapValidator({
+       // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+       feedbackIcons: {
+           valid: 'glyphicon glyphicon-ok',
+           invalid: 'glyphicon glyphicon-remove',
+           validating: 'glyphicon glyphicon-refresh'
+       },
+       fields: {
+           email: {
+               validators: {
+                   notEmpty: {
+                       message: 'Please supply your email address'
+                   },
+                   emailAddress: {
+                       message: 'Please supply a valid email address'
+                   }
+               }
+           },
+           password: {
+               validators: {
+                    stringLength: {
+                       min: 2,
+                   },
+                   notEmpty: {
+                       message: 'Please supply your password'
+                   }
+               }
+           },
+
+           }
+       })
+       .on('success.form.bv', function(e) {
+           $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+               $('#registerForm').data('bootstrapValidator').resetForm();
+
+           // Prevent form submission
+           e.preventDefault();
+
+           // Get the form instance
+           var $form = $(e.target);
+
+           // Get the BootstrapValidator instance
+           var bv = $form.data('bootstrapValidator');
+
+           // Use Ajax to submit form data
+           $.post($form.attr('action'), $form.serialize(), function(result) {
+               console.log(result);
+           }, 'json');
+       });
+
+</script>

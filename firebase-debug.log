@@ -12,3 +12,31 @@
 [info] Public Directory: ./
 [info] 
 [info] Server listening at: http://localhost:5000
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /Users/nuwan/.nvm/versions/node/v5.5.0/bin/node /Users/nuwan/.nvm/versions/node/v5.5.0/bin/firebase serve
+[debug] CLI Version:  3.2.0
+[debug] Platform:     darwin
+[debug] Node Version: v5.5.0
+[debug] Time:         Wed Dec 21 2016 01:44:31 GMT+0000 (GMT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/nuwan/Projects/Asha/PetClinic_project
+[info] Public Directory: ./
+[info] 
+[info] Server listening at: http://localhost:5000
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /Users/nuwan/.nvm/versions/node/v5.5.0/bin/node /Users/nuwan/.nvm/versions/node/v5.5.0/bin/firebase serve
+[debug] CLI Version:  3.2.0
+[debug] Platform:     darwin
+[debug] Node Version: v5.5.0
+[debug] Time:         Wed Dec 21 2016 11:15:50 GMT+0000 (GMT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/nuwan/Projects/Asha/PetClinic_project
+[info] Public Directory: ./
+[info] 
+[info] Server listening at: http://localhost:5000

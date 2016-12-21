@@ -1,57 +1,5 @@
 $(document).ready(function() {
-// contactUs form validation
- $('#signinForm').bootstrapValidator({
-        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: { 
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please supply your email address'
-                    },
-                    emailAddress: {
-                        message: 'Please supply a valid email address'
-                    }
-                }
-            },
-            password: {
-                validators: {
-                     stringLength: {
-                        min: 2,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your password'
-                    }
-                }
-            },
-                   
-            }
-        })
-        .on('success.form.bv', function(e) {
-            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                $('#registerForm').data('bootstrapValidator').resetForm();
-
-            // Prevent form submission
-            e.preventDefault();
-
-            // Get the form instance
-            var $form = $(e.target);
-
-            // Get the BootstrapValidator instance
-            var bv = $form.data('bootstrapValidator');
-
-            // Use Ajax to submit form data
-            $.post($form.attr('action'), $form.serialize(), function(result) {
-                console.log(result);
-            }, 'json');
-        });
-    
     // Register form validation
-
     $('#registerForm').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
@@ -98,7 +46,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            
+
             pName: {
                 validators: {
                      stringLength: {
@@ -139,7 +87,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            
+
             confirmPassword: {
                 validators: {
                     stringLength: {
@@ -148,14 +96,14 @@ $(document).ready(function() {
                     notEmpty: {
                         message: 'Please confirm your password'
                     },
-                    
+
                     identical: {
                         field: 'password',
                         message: 'The password and its confirm are not the same'
                     }
                 }
             }
-         
+
             }
         })
         .on('success.form.bv', function(e) {
@@ -176,8 +124,8 @@ $(document).ready(function() {
                 console.log(result);
             }, 'json');
         });
-    
-    
+
+
 // Book appoinment form validation
  $('#bookForm').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -225,7 +173,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            
+
             pName: {
                 validators: {
                      stringLength: {
@@ -271,16 +219,16 @@ $(document).ready(function() {
                      stringLength: {
                         min: 2,
                     },
-                    
+
                 }
             },
-          
+
             vName: {
                 validators: {
                      stringLength: {
                         min: 2,
                     },
-                    
+
                 }
             },
             comment: {
@@ -315,8 +263,8 @@ $(document).ready(function() {
                 console.log(result);
             }, 'json');
         });
-    
-    
+
+
     // Repeat Prescription form validation
  $('#repeatForm').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -357,7 +305,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            
+
             pName: {
                 validators: {
                      stringLength: {
@@ -368,7 +316,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            
+
             email: {
                 validators: {
                     notEmpty: {
@@ -379,8 +327,8 @@ $(document).ready(function() {
                     }
                 }
             },
-           
-            
+
+
            medication: {
                 validators: {
                      stringLength: {
@@ -401,8 +349,8 @@ $(document).ready(function() {
                     }
                 }
             },
-            
-       
+
+
             comment: {
                 validators: {
                       stringLength: {
@@ -435,8 +383,8 @@ $(document).ready(function() {
                 console.log(result);
             }, 'json');
         });
-    
-    
+
+
 // contactUs form validation
  $('#contactUsForm').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -453,7 +401,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            
+
              name: {
                 validators: {
                      stringLength: {
@@ -464,7 +412,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            
+
              pName: {
                 validators: {
                      stringLength: {
@@ -475,8 +423,8 @@ $(document).ready(function() {
                     }
                 }
             },
-           
-            
+
+
             email: {
                 validators: {
                     notEmpty: {
@@ -487,9 +435,9 @@ $(document).ready(function() {
                     }
                 }
             },
-           
-            
-          
+
+
+
             comment: {
                 validators: {
                       stringLength: {
@@ -523,6 +471,3 @@ $(document).ready(function() {
             }, 'json');
         });
 });
-
-
-
